@@ -12,11 +12,16 @@ import 'package:mekki/pages/category/wanita.dart';
 import 'package:mekki/pages/checkout.dart';
 import 'package:mekki/pages/home_page.dart';
 import 'package:mekki/pages/parment_page.dart';
+import 'package:mekki/pages/qrcode_page.dart';
 import 'package:mekki/supabase_config.dart';
+import 'package:mekki/payment/stripe_service.dart'; // ✅ Tambahkan ini
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initSupabase();
+
+  // ✅ Inisialisasi Stripe via StripeService
+  await StripeService.init();
 
   runApp(const MyApp());
 }

@@ -130,7 +130,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
               TextButton(
                 onPressed: () {
                   Navigator.pop(context);
-                  Navigator.pushReplacementNamed(context, '/invoice');
+                  Navigator.pushReplacementNamed(context, '/qrcode');
                 },
                 child: const Text("Lihat Invoice"),
               ),
